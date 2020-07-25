@@ -20,6 +20,10 @@ cat $header >> $index
 echo -e "\n<body>" >> $index
 for soft in $(ls $mirrirdir )
 do
+    echo -e "<h2> mirror web </h2>" >> $index 
+    echo -e "<a href=\"\">gitee:更新快</a><br>" >> $index  
+    echo -e "<a href=\"https://cndaqiang.github.io/packages/\">github:网速慢暂停更新</a><br>" >> $index  
+    #
     softdir=$mirrirdir/$soft
     if [ ! -d "$softdir" ] ; then continue ;  fi
     #soft
