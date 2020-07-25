@@ -1,0 +1,6 @@
+ tar xzvf cif2cell-1.2.10.tar.gz
+ python setup.py install --user
+ PATH=$PATH:/home/cndaqiang/.local/bin
+
+cif2cell -f Na2.cif -p siesta  -o structure.fdf
+cif2cell -f Na2.cif -p quantum-espresso  -o structure.in
