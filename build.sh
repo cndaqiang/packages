@@ -18,12 +18,14 @@ echo "<html>" >> $index
 cat $header >> $index
 #软件下载链接
 echo -e "\n<body>" >> $index
+#
+echo -e "<h2> Mirror web </h2>" >> $index 
+echo -e "<a href=\"http://cndaqiang.gitee.io/packages\">gitee:更新快</a><br>" >> $index  
+echo -e "<a href=\"https://cndaqiang.github.io/packages/\">github:暂停更新</a><br>" >> $index  
+echo -e "<a href=\"http://blog.cndaqiang.workers.dev/packages/\">cloudflare&github:暂停更新</a><br>" >> $index  
+#
 for soft in $(ls $mirrirdir )
 do
-    echo -e "<h2> mirror web </h2>" >> $index 
-    echo -e "<a href=\"http://cndaqiang.gitee.io/packages\">gitee:更新快</a><br>" >> $index  
-    echo -e "<a href=\"https://cndaqiang.github.io/packages/\">github:暂停更新</a><br>" >> $index  
-    echo -e "<a href=\"http://blog.cndaqiang.workers.dev/packages/\">cloudflare&github:暂停更新</a><br>" >> $index  
     #
     softdir=$mirrirdir/$soft
     if [ ! -d "$softdir" ] ; then continue ;  fi
