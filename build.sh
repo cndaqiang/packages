@@ -11,7 +11,7 @@ header=$htmldir/header.html
 footer=$htmldir/footer.html
 index=./index.html
 mirrirdir=./mirrors
-url="./" 
+url="./"
 #============== header
 echo "<!doctype html>" > $index
 echo "<html>" >> $index
